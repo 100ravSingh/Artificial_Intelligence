@@ -1,8 +1,9 @@
 {
   "name": "Conda Jupyter Dev Container",
   "build": {
-    "dockerfile": "Dockerfile"
-  },
+  "dockerfile": ".devcontainer/Dockerfile",
+  "context": ".."
+},
   "customizations": {
     "vscode": {
       "extensions": [
