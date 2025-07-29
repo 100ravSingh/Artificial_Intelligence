@@ -1,0 +1,6 @@
+notebook
+jupyterlab
+pandas
+numpy
+matplotlib
+scikit-learn

@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/devcontainers/base:ubuntu
 
-# Install basic tools
+# Install system dependencies
 RUN apt-get update && apt-get install -y curl git wget build-essential
 
 # Install Miniconda
@@ -11,10 +11,19 @@ RUN curl -fsSL https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_6
     rm miniconda.sh && \
     conda clean -afy
 
-# Create a default environment and install Jupyter
-RUN conda create -n dev python=3.11 -y && \
-    echo "conda activate dev" >> ~/.bashrc && \
-    /bin/bash -c "source ~/.bashrc && conda activate dev && conda install -y notebook jupyterlab pandas numpy matplotlib scikit-learn"
+# Accept ToS and initialize conda shell
+SHELL ["/bin/bash", "-c"]
+RUN conda config --set always_yes yes && \
+    conda config --set channel_priority strict && \
+    conda tos accept --channel https://repo.anaconda.com/pkgs/main && \
+    conda tos accept --channel https://repo.anaconda.com/pkgs/r && \
+    conda init bash
 
-# Expose Jupyter port
-EXPOSE 8888
+# Copy requirements.txt and install packages in a named environment
+COPY requirements.txt /tmp/requirements.txt
+RUN source ~/.bashrc && \
+    conda create -n dev python=3.11 -y && \
+    echo "conda activate dev" >> ~/.bashrc && \
+    source ~/.bashrc && \
+    conda activate dev && \
+    pip install -r /tmp/requirements.txt
