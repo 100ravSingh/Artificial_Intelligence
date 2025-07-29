@@ -9,15 +9,12 @@ This tutorial is ideal for developers, data scientists, and AI enthusiasts looki
 ## 📚 Table of Contents
 
 1. [Introduction](#introduction)
-2. [Module 1: Machine Learning (ML)](#module-1-machine-learning-ml)
-3. [Module 2: Deep Learning (DL)](#module-2-deep-learning-dl)
-4. [Module 3: Generative AI (GenAI)](#module-3-generative-ai-genai)
-5. [Module 4: Agent AI](#module-4-agent-ai)
-6. [Module 5: Agentic AI](#module-5-agentic-ai)
-7. [Module 6: Multi-Component Programs (MCP)](#module-6-multi-component-programs-mcp)
-8. [Getting Started](#getting-started)
-9. [Tools & Frameworks](#tools--frameworks)
-10. [License](#license)
+2. [Module 1: Machine Learning (ML)](./machine_learning)
+3. [Module 2: Deep Learning (DL)](./deep_learning)
+4. [Module 3: Generative AI (GenAI)](./gen_ai)
+5. [Module 4: Agent AI](./agent_ai)
+6. [Module 5: Agentic AI](./agentic_ai)
+7. [Module 6: Multi-Component Programs (MCP)]((./mcp))
 
 ---
 
