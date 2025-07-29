@@ -1,16 +1,18 @@
 {
-  "name": "Jupyter Dev Container",
-  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "name": "Conda Jupyter Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
   "customizations": {
     "vscode": {
       "extensions": [
-        "ms-toolsai.jupyter",
-        "ms-python.python"
+        "ms-python.python",
+        "ms-toolsai.jupyter"
       ]
     }
   },
   "forwardPorts": [8888],
-  "postCreateCommand": "pip install notebook && jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root &",
+  "postCreateCommand": "bash -c 'source ~/.bashrc && conda activate dev && jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root &'",
   "portsAttributes": {
     "8888": {
       "label": "Jupyter Notebook",
