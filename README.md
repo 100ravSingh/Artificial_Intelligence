@@ -14,7 +14,7 @@ This tutorial is ideal for developers, data scientists, and AI enthusiasts looki
 4. [Module 3: Generative AI (GenAI)](./gen_ai)
 5. [Module 4: Agent AI](./agent_ai)
 6. [Module 5: Agentic AI](./agentic_ai)
-7. [Module 6: Model Context Protocol (MCP)]((./mcp))
+7. [Module 6: Model Context Protocol (MCP)](./mcp)
 
 ---
 
