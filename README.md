@@ -101,3 +101,4 @@ Learn how to design **context-aware AI systems** that manage memory, intent, and
 ```bash
 git clone https://github.com/100ravSingh/Artificial_Intelligence.git
 cd Artificial_Intelligence
+pip install -r requirements.txt
