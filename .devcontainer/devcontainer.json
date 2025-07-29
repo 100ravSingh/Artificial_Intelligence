@@ -12,11 +12,13 @@
     }
   },
   "forwardPorts": [8888],
-  "postCreateCommand": "bash -c 'source ~/.bashrc && conda activate dev && jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root &'",
+  "postCreateCommand": "conda run -n dev jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root &",
   "portsAttributes": {
     "8888": {
       "label": "Jupyter Notebook",
       "onAutoForward": "openBrowser"
     }
-  }
+  },
+  "features": {},
+  "remoteUser": "vscode"
 }

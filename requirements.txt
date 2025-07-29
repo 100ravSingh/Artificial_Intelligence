@@ -1,5 +1,3 @@
-notebook
-jupyterlab
 pandas
 numpy
 matplotlib
