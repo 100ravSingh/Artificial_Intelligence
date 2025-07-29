@@ -11,19 +11,16 @@ RUN curl -fsSL https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_6
     rm miniconda.sh && \
     conda clean -afy
 
-# Accept ToS and initialize conda shell
+# Accept ToS and configure conda
 SHELL ["/bin/bash", "-c"]
 RUN conda config --set always_yes yes && \
     conda config --set channel_priority strict && \
     conda tos accept --channel https://repo.anaconda.com/pkgs/main && \
-    conda tos accept --channel https://repo.anaconda.com/pkgs/r && \
-    conda init bash
+    conda tos accept --channel https://repo.anaconda.com/pkgs/r
 
-# Copy requirements.txt and install packages in a named environment
+# Copy requirements.txt and install using conda and pip, without conda activate
 COPY requirements.txt /tmp/requirements.txt
-RUN source ~/.bashrc && \
-    conda create -n dev python=3.11 -y && \
-    echo "conda activate dev" >> ~/.bashrc && \
-    source ~/.bashrc && \
-    conda activate dev && \
-    pip install -r /tmp/requirements.txt
+RUN conda create -n dev python=3.11 -y && \
+    conda run -n dev pip install -r /tmp/requirements.txt
+
+RUN echo "conda activate dev" >> /root/.bashrc
