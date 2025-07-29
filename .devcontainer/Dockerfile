@@ -17,6 +17,6 @@ RUN conda config --set always_yes yes && \
     conda init bash
 
 COPY requirements.txt /tmp/requirements.txt
-RUN conda create -n dev python=3.11 jupyter jupyterlab -y && \
+RUN conda create -n dev python=3.13 jupyter jupyterlab -y && \
     conda run -n dev pip install -r /tmp/requirements.txt && \
     echo "conda activate dev" >> /root/.bashrc
