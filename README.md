@@ -1,6 +1,6 @@
 # 🚀 AI Tutorial Series: From ML to Agentic AI & MCP
 
-Welcome to the **AI Tutorial Series** – a progressive, hands-on guide designed to take you from the fundamentals of **Machine Learning (ML)** through the latest innovations in **Agentic AI** and **Multi-Component Programs (MCPs)**.
+Welcome to the **AI Tutorial Series** – a progressive, hands-on guide designed to take you from the fundamentals of **Machine Learning (ML)** through the latest innovations in **Agentic AI** and ***Model Context Protocol (MCP)**.
 
 This tutorial is ideal for developers, data scientists, and AI enthusiasts looking to deepen their knowledge across the entire AI spectrum.
 
@@ -14,7 +14,7 @@ This tutorial is ideal for developers, data scientists, and AI enthusiasts looki
 4. [Module 3: Generative AI (GenAI)](./gen_ai)
 5. [Module 4: Agent AI](./agent_ai)
 6. [Module 5: Agentic AI](./agentic_ai)
-7. [Module 6: Multi-Component Programs (MCP)]((./mcp))
+7. [Module 6: Model Context Protocol (MCP)]((./mcp))
 
 ---
 
@@ -84,14 +84,15 @@ Design and deploy agentic systems:
 
 ---
 
-## 🛠️ Module 6: Multi-Component Programs (MCP)
+## 🧩 Module 6: Model Context Protocol (MCP)
 
-Explore modular and compositional AI systems:
+Learn how to design **context-aware AI systems** that manage memory, intent, and continuity using MCP:
 
-- Introduction to MCP design
-- Combining tools, models, and agents
-- Planning, orchestration, and fallback strategies
-- Building complex apps with LangGraph / DSPy
+- **What is MCP?** – A structured protocol for maintaining context in long-running model sessions
+- **Context layers:** system, user, task, and dynamic history
+- **Applications:** AI copilots, autonomous workflows, instructional memory, and behavioral adaptation
+- **Implementation:** LangChain, OpenAI Assistants API, DSPy
+- **Design best practices:** Context pruning, summarization, state handoff, and serialization
 
 ---
 
@@ -100,4 +101,3 @@ Explore modular and compositional AI systems:
 ```bash
 git clone https://github.com/100ravSingh/Artificial_Intelligence.git
 cd Artificial_Intelligence
-pip install -r requirements.txt
