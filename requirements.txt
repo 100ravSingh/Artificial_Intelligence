@@ -1,8 +1,11 @@
 pandas
-numpy
+numpy==2.2.0
 matplotlib
 scikit-learn
 jupyterlab
 jupyter
 notebook
 seaborn
+xgboost
+lime
+shap
